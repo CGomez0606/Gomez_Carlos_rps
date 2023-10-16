@@ -38,7 +38,8 @@ scissors_w, scissors_h = 256, 170
 
  
 
- 
+''' The logic below is the screen that appears when you run the program.
+It is the background of the game.'''
 
  
 
@@ -91,7 +92,8 @@ scissors_image = os.path.join(images_folder, 'scissors.gif')
 scissors_instance = turtle.Turtle()
 
  
-
+''' This logic codes the images to appear and on line 151 the logic shows what coordinates 
+for the pictures to appear on. '''
  
 
 def show_rock(x,y):
@@ -181,6 +183,8 @@ def collide(x,y,obj,w,h):
  
 
  
+''' The logic below allows text to appear on the screen saying either rock, paper, or scissors
+ depending on which one of the options you choose'''
 
  
 
@@ -216,7 +220,7 @@ def player(x, y):
 
    
 
- 
+    ''' This makes text pop up asking computer to choose either rock, paper, or scissors.'''
 
     from random import randint
 
@@ -245,7 +249,7 @@ def player(x, y):
     text.goto(target_x, target_y)
 
  
-
+    ''' Import time allows to slow down text duration time and allows for player to read thoroughly. '''
  
 
     import time
@@ -254,7 +258,8 @@ def player(x, y):
 
     time.sleep(0.5)
 
- 
+    '''The code below is logic telling the computer wether the game is a tie, you won, or you lost
+    based on the choices provided by the player and the random selection of the computer'''
 
     if user_choice == computer:
         result = "It's a tie!"
